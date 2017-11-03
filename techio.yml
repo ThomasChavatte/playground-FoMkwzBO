@@ -3,3 +3,6 @@ plan:
 - title: try
   statement: statement.md
   id : Intro
+- title: try2
+  statement: tete.md
+  id : Intro2
