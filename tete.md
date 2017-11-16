@@ -65,6 +65,14 @@ class Regulateur extends VoitureAvecOption{
 Maintenant on implément le main pour utiliser notre décorateur
     
 ```java Runnable
+
+public class Usine {
+    public static void main(String[] args) {
+		Voiture corsa = new Corsa();
+		Voiture corsaOption = new CorsaAvecToitOuvrantDecorator(corsa);
+		System.out.println(corsaOption.getPoids()+" - "+corsaOption.getPrix());
+	}
+}
 class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
 		this.voiture = cor;
@@ -73,30 +81,40 @@ class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 ```
 
 ```java runnable
-class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
+Public main extends VoitureAvecToitOuvrant{
 	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
 		this.voiture = cor;
 	}
 }
 
 abstract class Voiture {
-	String nom, marque; 
+	String nom;
+	int Poids;
+	int Prix;
 	abstract int getPrix();
 	abstract int getPoids();
+	abstract String getLibelle();
 }
-    class Corsa extends Voiture{
+class 
+Corsa extends Voiture{
     	public Corsa() {
-    		this.nom = "Corsa"; this.marque = "Opel";
+    		this.nom = "Corsa";
+    		this.Poids=1500;
+    		this.Prix=5000;
     	}	
-    	int getPrix() {return 5000;}	
-    	int getPoids() {return 1500;}	
+    	int getPrix() {return this.Prix ;}	
+    	int getPoids() {return this.Poids;}	
+    	String getLibelle() {return this.nom;}
 }
-    class C2 extends Voiture{
+class C2 extends Voiture{
     	public C2() {
-    		this.nom = "C2"; this.marque = "Citroën";
+    		this.nom = "C2";
+    		this.Poids=1000;
+    		this.Prix=4000;
     	}	
-    	int getPrix() {return 4000;}	
-    	int getPoids() {return 1000;}	
+    	int getPrix() {return this.Prix;}	
+    	int getPoids() {return this.Poids;}
+    	String getLibelle() {return this.nom;}
 }
 
 abstract class VoitureAvecOption extends Voiture{
@@ -105,17 +123,20 @@ abstract class VoitureAvecOption extends Voiture{
 class ToitOuvrant extends VoitureAvecOption{
 	
 	int getPrix() {return voiture.getPrix() + 2000;}
-	int getPoids() {return voiture.getPoids() + 15;}	
+	int getPoids() {return voiture.getPoids() + 15;}
+	String getLibelle() {return voiture.getLibelle() + "+ Toit Ouvrant";}
 }
-class Climatisation extends VoitureAvecOption{
+class GPS extends VoitureAvecOption{
 	
 	int getPrix() {return voiture.getPrix() + 1000;}
-	int getPoids() {return voiture.getPoids() + 20;}	
+	int getPoids() {return voiture.getPoids() + 20;}
+	String getLibelle() {return voiture.getLibelle() + "+ GPS";}
 }
 class Regulateur extends VoitureAvecOption{
 	
 	int getPrix() {return voiture.getPrix() + 200;}
-	int getPoids() {return voiture.getPoids() + 1;}	
+	int getPoids() {return voiture.getPoids() + 1;}
+	String getLibelle() {return voiture.getLibelle() + "+ Regulateur";}
 }
 
 ```
