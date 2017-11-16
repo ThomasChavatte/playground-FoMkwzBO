@@ -119,12 +119,6 @@ class Regulateur extends VoitureAvecOption{
 	int getPoids() {return voiture.getPoids() + 1;}	
 }
 
-class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
-	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
-		this.voiture = cor;
-	}
-}
-
 ```
 
 
