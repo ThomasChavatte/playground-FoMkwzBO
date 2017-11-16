@@ -32,6 +32,7 @@ Maintenant on crée la classe Corsa et la classe C2 qui correspond aux classes C
 ```
 # Troisième étape 
 
+A présent, on crée le Décorateur. Celui-ci possède une voiture en attribut et oblige la redéfinission de deux méthodes getLibelle() et getPrix(). 
     
 ```java Runnable
 abstract class VoitureAvecOption extends Voiture{
@@ -39,13 +40,27 @@ abstract class VoitureAvecOption extends Voiture{
 }
 ```
 
+Chaque Option (ToitOuvrant, Climatisation, Régulateur...) doit hériter de la classe VoitureAvecOption.
+
 ```java Runnable
-class VoitureAvecToitOuvrant extends VoitureAvecOption{
+class ToitOuvrant extends VoitureAvecOption{
 	
-	int getPrix() {return voiture.getPrix() + 10000;}
+	int getPrix() {return voiture.getPrix() + 2000;}
 	int getPoids() {return voiture.getPoids() + 15;}	
 }
+class Climatisation extends VoitureAvecOption{
+	
+	int getPrix() {return voiture.getPrix() + 1000;}
+	int getPoids() {return voiture.getPoids() + 20;}	
+}
+class Regulateur extends VoitureAvecOption{
+	
+	int getPrix() {return voiture.getPrix() + 200;}
+	int getPoids() {return voiture.getPoids() + 1;}	
+}
 ```
+
+
 
 ```java Runnable
 class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
