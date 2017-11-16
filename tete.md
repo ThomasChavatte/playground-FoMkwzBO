@@ -81,7 +81,16 @@ class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 ```
 
 ```java runnable
-Public main extends VoitureAvecToitOuvrant{
+public class Usine {
+	// Implémentation
+	public static void main(String[] args) {
+		Voiture corsa = new Corsa();
+		Voiture corsaOption = new CorsaAvecToitOuvrantDecorator(ds);
+		System.out.println(CorsaOption.getPoids()+" - "+CorsaOption.getPrix());
+	}
+}
+
+
 	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
 		this.voiture = cor;
 	}
