@@ -39,8 +39,9 @@ abstract class VoitureAvecOption extends Voiture{
 	Voiture voiture;
 }
 ```
+# Quatrième étape
 
-Chaque Option (ToitOuvrant, Climatisation, Régulateur...) doit hériter de la classe VoitureAvecOption.
+    On crée une classe pour chaque option que l'on souhaite aujouter. Chaque Option (ToitOuvrant, Climatisation, Régulateur...) doit hériter de la classe VoitureAvecOption.
 
 ```java Runnable
 class ToitOuvrant extends VoitureAvecOption{
