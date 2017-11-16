@@ -11,7 +11,7 @@ What is the answer to Life, the Universe and Everything?
 -[ ] Easy, this is 42
 -[ ] Peace & Love
 
-```java Runnable```
+```java Runnable
 public abstract class Voiture {
 
 	String nom, marque; 
