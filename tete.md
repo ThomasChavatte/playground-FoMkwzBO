@@ -91,6 +91,7 @@ public class Usine {
 }
 
 
+class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
 		this.voiture = cor;
 	}
