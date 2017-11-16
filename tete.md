@@ -1,6 +1,6 @@
 # Première étape.
 
-Premièrement on crée la classe abstraite qui regroupe les méthodes et les attributs communs. Ce sont ces méthodes que l'on utiliserait dans les autres classes
+Premièrement on crée la classe abstraite qui regroupe les méthodes et les attributs communs. Ce sont ces méthodes que l'on utilisera dans les autres classes
     
 ```java Runnable
 public abstract class Voiture {
@@ -70,5 +70,61 @@ class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 		this.voiture = cor;
 	}
 }
+```
+
+```java Runnable
+
+Public class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
+	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
+		this.voiture = cor;
+	}
+}
+
+abstract class Voiture {
+	String nom, marque; 
+	abstract int getPrix();
+	abstract int getPoids();
+}
+    class Corsa extends Voiture{
+    	public DS() {
+    		this.nom = "Corsa"; this.marque = "Opel";
+    	}	
+    	int getPrix() {return 5000;}	
+    	int getPoids() {return 1500;}	
+}
+    class C2 extends Voiture{
+    	public DS() {
+    		this.nom = "C2"; this.marque = "Citroën";
+    	}	
+    	int getPrix() {return 4000;}	
+    	int getPoids() {return 1000;}	
+}
+
+abstract class VoitureAvecOption extends Voiture{
+	Voiture voiture;
+}	
+class ToitOuvrant extends VoitureAvecOption{
+	
+	int getPrix() {return voiture.getPrix() + 2000;}
+	int getPoids() {return voiture.getPoids() + 15;}	
+}
+class Climatisation extends VoitureAvecOption{
+	
+	int getPrix() {return voiture.getPrix() + 1000;}
+	int getPoids() {return voiture.getPoids() + 20;}	
+}
+class Regulateur extends VoitureAvecOption{
+	
+	int getPrix() {return voiture.getPrix() + 200;}
+	int getPoids() {return voiture.getPoids() + 1;}	
+}
+
+class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
+	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
+		this.voiture = cor;
+	}
+}
+
+```
 
 
