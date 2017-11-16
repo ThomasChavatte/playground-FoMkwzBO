@@ -1,6 +1,6 @@
 # Première étape.
 
-    Premièrement on crée la classe abstraite qui regroupe les méthodes et les attributs communs. Ce sont ces méthodes que l'on utiliserait dans les autres classes
+Premièrement on crée la classe abstraite qui regroupe les méthodes et les attributs communs. Ce sont ces méthodes que l'on utiliserait dans les autres classes
     
 ```java Runnable
 public abstract class Voiture {
