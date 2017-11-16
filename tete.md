@@ -16,14 +16,14 @@ Maintenant on crée la classe Corsa et la classe C2 qui correspond aux classes C
 
 ```java Runnable
     class Corsa extends Voiture{
-    	public DS() {
+    	public Corsa() {
     		this.nom = "Corsa"; this.marque = "Opel";
     	}	
     	int getPrix() {return 5000;}	
     	int getPoids() {return 1500;}	
 }
     class C2 extends Voiture{
-    	public DS() {
+    	public C2() {
     		this.nom = "C2"; this.marque = "Citroën";
     	}	
     	int getPrix() {return 4000;}	
@@ -85,14 +85,14 @@ abstract class Voiture {
 	abstract int getPoids();
 }
     class Corsa extends Voiture{
-    	public DS() {
+    	public Corsa() {
     		this.nom = "Corsa"; this.marque = "Opel";
     	}	
     	int getPrix() {return 5000;}	
     	int getPoids() {return 1500;}	
 }
     class C2 extends Voiture{
-    	public DS() {
+    	public C2() {
     		this.nom = "C2"; this.marque = "Citroën";
     	}	
     	int getPrix() {return 4000;}	
@@ -118,12 +118,6 @@ class Regulateur extends VoitureAvecOption{
 	int getPoids() {return voiture.getPoids() + 1;}	
 }
 
-```
-
-```javascript runnable
-var a = 2;
-var b = 4;
-console.log(a+b);
 ```
 
 
