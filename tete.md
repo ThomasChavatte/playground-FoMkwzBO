@@ -60,9 +60,10 @@ class Regulateur extends VoitureAvecOption{
 	int getPoids() {return voiture.getPoids() + 1;}	
 }
 ```
+# Cinquième étape 
 
-
-
+Maintenant on implément le main pour utiliser notre décorateur
+    
 ```java Runnable
 class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
