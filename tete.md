@@ -10,3 +10,12 @@ What is the answer to Life, the Universe and Everything?
 -[ ] Sleep and eat
 -[ ] Easy, this is 42
 -[ ] Peace & Love
+
+```java Runable```
+public abstract class Voiture {
+
+	String nom, marque; 
+	abstract int getPrix();
+	abstract int getPoids();
+}
+```
