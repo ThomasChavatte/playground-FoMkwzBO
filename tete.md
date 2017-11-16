@@ -73,7 +73,7 @@ class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 ```
 
 ```java runnable
-Public class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
+class CorsaAvecToitOuvrantDecorator extends VoitureAvecToitOuvrant{
 	public CorsaAvecToitOuvrantDecorator(Corsa cor) {
 		this.voiture = cor;
 	}
