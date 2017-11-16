@@ -12,7 +12,7 @@ public abstract class Voiture {
 
 # Deuxieme étape 
 
-    Maintenant on crée la classe Corsa et la classe C2 qui correspond aux classes Composant Concret. Elle héritent de la classe voiture. Dans le constructeur de ces classes on met à jour les attributs défini dans Voiture à l’aide des accesseurs
+Maintenant on crée la classe Corsa et la classe C2 qui correspond aux classes Composant Concret. Elle héritent de la classe voiture. Dans le constructeur de ces classes on met à jour les attributs défini dans Voiture à l’aide des accesseurs
 
 ```java Runnable
     class Corsa extends Voiture{
@@ -30,7 +30,7 @@ public abstract class Voiture {
     	int getPoids() {return 1000;}	
 }
 ```
-# Troiseème étape 
+# Troisième étape 
 
     
 ```java Runnable
