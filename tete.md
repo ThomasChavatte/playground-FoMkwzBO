@@ -64,7 +64,7 @@ class Regulateur extends VoitureAvecOption{
 
 Maintenant on implément le main pour utiliser notre décorateur
     
-```java Runnable
+```java runnable
 
 public class Usine {
     public static void main(String[] args) {
